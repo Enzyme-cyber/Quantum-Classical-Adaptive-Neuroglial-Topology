@@ -1,0 +1,3 @@
+model,intercept,beta_x,beta_g,beta_xg,RMSE,MAE,R2
+additive,0.0,0.0,0.0,0.0,0.0,0.0,
+interaction,0.0,0.0,0.0,0.0,0.0,0.0,

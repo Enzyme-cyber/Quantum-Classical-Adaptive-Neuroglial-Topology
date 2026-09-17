@@ -1,0 +1,4 @@
+trial,phase,candidate_id,edge_type,event,driver,affinity,competition_win,strength_before,strength_after,generated_from
+5,repeated_additive_loop,AUTO_GG_G0_G1,glia_glia,formed,0.501052135508806,0.96,True,0.2598098772685,0.4218786261114268,local_domains:G0
+7,repeated_additive_loop,AUTO_GN_G1_N3,glia_to_neuron,formed,0.6735258441045988,1.0,True,0.1837371236255577,0.3961495224710331,local_domain:G1
+9,repeated_additive_loop,AUTO_TRI_N4_G1_N6,tripartite,formed,0.4628971170387436,1.0,True,0.3074750620383157,0.42437180648334194,local_domain:G1
