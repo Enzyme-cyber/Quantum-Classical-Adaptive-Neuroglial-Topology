@@ -1,0 +1,141 @@
+{
+  "name": "V7.1 blank spatial-competitive evolution template",
+  "trace": {
+    "neuron_decay": 0.82,
+    "neuron_gain": 0.22,
+    "glia_decay": 0.88,
+    "glia_gain": 0.28,
+    "trace_max": 1.0
+  },
+  "shots_override": 3000,
+  "qpu_repeats_override": 1,
+  "competition": {
+    "enabled": true,
+    "default_winners_per_group": 1,
+    "winners_by_prefix": {
+      "GG": 1,
+      "GN_IN": 1,
+      "GN_OUT": 1,
+      "NG": 1,
+      "NN_IN": 1,
+      "NN_OUT": 2,
+      "TRI_T": 1,
+      "TRI_G": 1
+    },
+    "loser_decay_multiplier": 1.5
+  },
+  "spatial_growth": {
+    "enabled": true,
+    "minimum_affinity": 0.2,
+    "generate_edge_types": [
+      "glia_glia",
+      "glia_to_neuron",
+      "tripartite"
+    ],
+    "local_domains": [
+      {
+        "glia": 0,
+        "nearby_glia": [
+          {
+            "glia": 1,
+            "affinity": 0.8
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 0.8,
+            "gn_affinity": 0.8,
+            "ng_affinity": 0.8,
+            "nn_affinity": 0.8,
+            "tripartite_sensory_affinity": 0.8,
+            "tripartite_target_affinity": 0.8
+          }
+        ]
+      },
+      {
+        "glia": 1,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 0.8
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 1,
+            "affinity": 0.8,
+            "gn_affinity": 0.8,
+            "ng_affinity": 0.8,
+            "nn_affinity": 0.8,
+            "tripartite_sensory_affinity": 0.8,
+            "tripartite_target_affinity": 0.8
+          }
+        ]
+      }
+    ],
+    "edge_templates": {
+      "glia_glia": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.28,
+        "structural_decay": 0.02,
+        "on_threshold": 0.38,
+        "off_threshold": 0.18,
+        "max_weight": 0.8,
+        "max_exchange_weight": 1.0,
+        "driver_mode": "min"
+      },
+      "glia_to_neuron": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.28,
+        "structural_decay": 0.02,
+        "on_threshold": 0.38,
+        "off_threshold": 0.18,
+        "max_weight": 2.0,
+        "driver_mode": "min",
+        "requires_glial_network": true
+      },
+      "neuron_to_glia": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.28,
+        "structural_decay": 0.02,
+        "on_threshold": 0.38,
+        "off_threshold": 0.18,
+        "max_weight": 2.0,
+        "driver_mode": "min"
+      },
+      "neuron_to_neuron": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.24,
+        "structural_decay": 0.02,
+        "on_threshold": 0.42,
+        "off_threshold": 0.2,
+        "max_weight": 1.5,
+        "driver_mode": "min",
+        "requires_glial_network": true
+      },
+      "tripartite": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.24,
+        "structural_decay": 0.02,
+        "on_threshold": 0.42,
+        "off_threshold": 0.2,
+        "max_weight": 1.0,
+        "driver_mode": "min",
+        "requires_glial_network": true,
+        "require_phasic_sensory": true
+      }
+    }
+  },
+  "candidate_edges": [],
+  "training_phases": [
+    {
+      "name": "training",
+      "repetitions": 10,
+      "plasticity_update": true,
+      "neural_inputs": []
+    }
+  ],
+  "probes": [],
+  "run_probes_before_training": false
+}
