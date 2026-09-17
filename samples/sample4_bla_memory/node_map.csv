@@ -1,0 +1,21 @@
+node,type,biological_interpretation,evidence_level
+N0,neuron_population,auditory conditioned stimulus CS,task-defined input
+N1,neuron_population,aversive unconditioned stimulus US,task-defined input
+N2,neuron_population,conditioning Context A representation,task-defined input
+N3,neuron_population,extinction Context B representation,task-defined input
+N4,neuron_population,BLA fear-memory / conditionally CS-excited ensemble,paper-motivated coarse grain
+N5,neuron_population,extinction-plastic / safety ensemble,paper-motivated coarse grain
+N6,neuron_population,BLA-to-PL fear readout,paper directly tests BLA-to-PL population
+N7,neuron_population,extinction/safety relay,model coarse grain
+N8,behavioral_readout,FREEZE route,model readout
+N9,behavioral_readout,fear-suppression route,model readout
+G0,astrocyte_state,US-responsive BLA astrocyte state,paper directly shows strong US-related astrocyte Ca response
+G1,astrocyte_state,learned CS/fear-associated astrocyte state,paper-motivated functional coarse grain
+G2,astrocyte_state,extinction-adapting astrocyte state,paper-motivated heterogeneous extinction-related events
+G3,astrocyte_state,Context-A-associated local state/distractor,model coarse grain
+G4,astrocyte_state,astrocyte-supported BLA-to-PL microdomain,paper-motivated causal readout coarse grain
+G5,astrocyte_state,Context-B/extinction-associated state,model coarse grain
+G6,astrocyte_state,local distractor domain,structural control
+G7,astrocyte_state,local distractor domain,structural control
+G8,astrocyte_state,reserved distractor domain,structural control
+G9,astrocyte_state,reserved distractor domain,structural control

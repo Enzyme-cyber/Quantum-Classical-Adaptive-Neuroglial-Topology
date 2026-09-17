@@ -1,0 +1,111 @@
+{
+  "name": "V7.1 Sample 3 V3 feedback + effort-meta topology",
+  "description": "No exact future edge is supplied. Actual divisor/quotient activity builds the execution feedback topology. Current bounded enumeration effort drives a slow G2 state; a spatially generated N4+G2->N9 meta-route can emerge and compete with the pre-existing enumeration strategy route. No N/log2(N) complexity label and no explicit experience replay are supplied.",
+  "trace": {
+    "neuron_decay": 0.82,
+    "neuron_gain": 0.28,
+    "glia_decay": 0.91,
+    "glia_gain": 0.31,
+    "trace_max": 1.0
+  },
+  "shots_override": 2500,
+  "qpu_repeats_override": 1,
+  "competition": {
+    "enabled": true,
+    "default_winners_per_group": 2,
+    "winners_by_prefix": {
+      "GG": 2,
+      "TRI_T": 2,
+      "TRI_G": 2,
+      "NN_IN": 3,
+      "NN_OUT": 3
+    },
+    "loser_decay_multiplier": 1.6
+  },
+  "spatial_growth": {
+    "enabled": true,
+    "minimum_affinity": 0.15,
+    "generate_edge_types": ["glia_glia", "tripartite", "neuron_to_neuron"],
+    "local_domains": [
+      {
+        "glia": 0,
+        "nearby_glia": [
+          {"glia": 1, "affinity": 0.90, "gg_affinity": 0.90},
+          {"glia": 4, "affinity": 0.82, "gg_affinity": 0.82}
+        ],
+        "nearby_neurons": [
+          {"neuron": 1, "affinity": 0.95, "nn_affinity": 0.35}
+        ]
+      },
+      {
+        "glia": 1,
+        "nearby_glia": [
+          {"glia": 0, "affinity": 0.90, "gg_affinity": 0.90},
+          {"glia": 2, "affinity": 0.85, "gg_affinity": 0.85},
+          {"glia": 5, "affinity": 0.82, "gg_affinity": 0.82}
+        ],
+        "nearby_neurons": [
+          {"neuron": 2, "affinity": 0.94, "tripartite_sensory_affinity": 0.94, "tripartite_target_affinity": 0.20, "nn_affinity": 0.72},
+          {"neuron": 7, "affinity": 0.93, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.93, "nn_affinity": 0.93},
+          {"neuron": 0, "affinity": 0.91, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.20, "nn_affinity": 0.91}
+        ]
+      },
+      {
+        "glia": 2,
+        "nearby_glia": [
+          {"glia": 1, "affinity": 0.85, "gg_affinity": 0.85},
+          {"glia": 6, "affinity": 0.82, "gg_affinity": 0.82}
+        ],
+        "nearby_neurons": [
+          {"neuron": 4, "affinity": 0.95, "tripartite_sensory_affinity": 0.95, "tripartite_target_affinity": 0.20, "nn_affinity": 0.10},
+          {"neuron": 9, "affinity": 0.94, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.94, "nn_affinity": 0.10},
+          {"neuron": 5, "affinity": 0.88, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.88, "nn_affinity": 0.10}
+        ]
+      },
+      {
+        "glia": 4,
+        "nearby_glia": [{"glia": 0, "affinity": 0.82, "gg_affinity": 0.82}],
+        "nearby_neurons": []
+      },
+      {
+        "glia": 5,
+        "nearby_glia": [{"glia": 1, "affinity": 0.82, "gg_affinity": 0.82}],
+        "nearby_neurons": [
+          {"neuron": 2, "affinity": 0.82, "tripartite_sensory_affinity": 0.82, "tripartite_target_affinity": 0.20, "nn_affinity": 0.10},
+          {"neuron": 7, "affinity": 0.80, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.80, "nn_affinity": 0.10}
+        ]
+      },
+      {
+        "glia": 6,
+        "nearby_glia": [{"glia": 2, "affinity": 0.82, "gg_affinity": 0.82}],
+        "nearby_neurons": [
+          {"neuron": 4, "affinity": 0.84, "tripartite_sensory_affinity": 0.84, "tripartite_target_affinity": 0.20, "nn_affinity": 0.10},
+          {"neuron": 5, "affinity": 0.82, "tripartite_sensory_affinity": 0.20, "tripartite_target_affinity": 0.82, "nn_affinity": 0.10}
+        ]
+      }
+    ],
+    "edge_templates": {
+      "glia_glia": {
+        "growth_threshold": 0.18, "learning_rate": 0.28, "structural_decay": 0.025,
+        "on_threshold": 0.38, "off_threshold": 0.18,
+        "max_weight": 0.9, "max_exchange_weight": 1.05, "driver_mode": "min"
+      },
+      "tripartite": {
+        "growth_threshold": 0.16, "learning_rate": 0.30, "structural_decay": 0.025,
+        "on_threshold": 0.37, "off_threshold": 0.18,
+        "max_weight": 2.05, "driver_mode": "min",
+        "requires_glial_network": true, "require_phasic_sensory": true,
+        "sensory_pool": [2, 4], "target_pool": [7, 9, 5]
+      },
+      "neuron_to_neuron": {
+        "growth_threshold": 0.13, "learning_rate": 0.32, "structural_decay": 0.024,
+        "on_threshold": 0.28, "off_threshold": 0.13,
+        "max_weight": 2.0, "driver_mode": "min", "requires_glial_network": true
+      }
+    }
+  },
+  "candidate_edges": [],
+  "training_phases": [],
+  "probes": [],
+  "run_probes_before_training": false
+}

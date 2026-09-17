@@ -1,0 +1,6 @@
+condition,n_seeds,bidirectional_history_disambiguation_index_mean,bidirectional_history_disambiguation_index_sd,bidirectional_history_disambiguation_index_median,absolute_history_output_difference_mean,absolute_history_output_difference_sd
+activity_equalized,20,0.8295940035281015,0.052415933312927494,0.8293869472192914,0.8295940035281015,0.052415933312927494
+glia_ablated,20,0.0,0.0,0.0,0.0,0.0
+glia_equalized,20,0.0,0.0,0.0,0.0,0.0
+intact_glia,20,0.9718429383212458,0.0223466015458056,0.9795152420938347,0.9718429383212458,0.0223466015458056
+topology_equalized_union,20,0.9718429383212458,0.0223466015458056,0.9795152420938347,0.9718429383212458,0.0223466015458056

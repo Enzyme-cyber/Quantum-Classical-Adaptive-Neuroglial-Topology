@@ -1,0 +1,250 @@
+{
+  "name": "Sample4 V1.3 BLA: retained fear memory + context-gated extinction + renewal",
+  "description": "Bukalo et al. 2026-constrained reduced BLA circuit. V1.3 represents fear and extinction as coexisting stored assemblies. The fixed N0->G2 pathway may reactivate an extinction-associated astrocyte state, but downstream extinction/safety tripartite output requires Context-B N3 coincidence; therefore CS-only N0+G2->N5/N9 bypass candidates are excluded from the reduced causal motif. This is a model abstraction of context-dependent extinction/renewal, not a measured microscopic synapse map.",
+  "trace": {
+    "neuron_decay": 0.8,
+    "neuron_gain": 0.3,
+    "glia_decay": 0.9,
+    "glia_gain": 0.34,
+    "trace_max": 1.0
+  },
+  "shots_override": 3000,
+  "qpu_repeats_override": 1,
+  "competition": {
+    "enabled": true,
+    "default_winners_per_group": 1,
+    "winners_by_prefix": {
+      "GG": 1,
+      "TRI_T": 1,
+      "TRI_G": 2
+    },
+    "loser_decay_multiplier": 1.6
+  },
+  "spatial_growth": {
+    "enabled": true,
+    "minimum_affinity": 0.2,
+    "generate_edge_types": [
+      "glia_glia",
+      "tripartite"
+    ],
+    "local_domains": [
+      {
+        "glia": 0,
+        "nearby_glia": [
+          {
+            "glia": 1,
+            "affinity": 1.0
+          },
+          {
+            "glia": 6,
+            "affinity": 1.0
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 1,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 4,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          }
+        ]
+      },
+      {
+        "glia": 1,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 1.0
+          },
+          {
+            "glia": 3,
+            "affinity": 1.0
+          },
+          {
+            "glia": 6,
+            "affinity": 1.0
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 1,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 2,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 4,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 8,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          }
+        ]
+      },
+      {
+        "glia": 2,
+        "nearby_glia": [
+          {
+            "glia": 5,
+            "affinity": 1.0
+          },
+          {
+            "glia": 6,
+            "affinity": 1.0
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 3,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 5,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 9,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          }
+        ]
+      },
+      {
+        "glia": 5,
+        "nearby_glia": [
+          {
+            "glia": 2,
+            "affinity": 1.0
+          },
+          {
+            "glia": 7,
+            "affinity": 1.0
+          }
+        ],
+        "nearby_neurons": []
+      },
+      {
+        "glia": 6,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 1.0
+          },
+          {
+            "glia": 1,
+            "affinity": 1.0
+          },
+          {
+            "glia": 2,
+            "affinity": 1.0
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 4,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 5,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 8,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          },
+          {
+            "neuron": 9,
+            "affinity": 1.0,
+            "tripartite_sensory_affinity": 1.0,
+            "tripartite_target_affinity": 1.0
+          }
+        ]
+      }
+    ],
+    "edge_templates": {
+      "glia_glia": {
+        "growth_threshold": 0.1,
+        "learning_rate": 0.55,
+        "structural_decay": 0.02,
+        "on_threshold": 0.28,
+        "off_threshold": 0.14,
+        "max_weight": 0.8,
+        "max_exchange_weight": 1.2,
+        "driver_mode": "min"
+      },
+      "tripartite": {
+        "growth_threshold": 0.1,
+        "learning_rate": 0.32,
+        "structural_decay": 0.02,
+        "on_threshold": 0.38,
+        "off_threshold": 0.18,
+        "max_weight": 1.35,
+        "driver_mode": "min",
+        "requires_glial_network": true,
+        "require_phasic_sensory": true,
+        "sensory_pool": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "target_pool": [
+          4,
+          5,
+          8,
+          9
+        ]
+      }
+    }
+  },
+  "candidate_edges": [],
+  "training_phases": [],
+  "probes": [],
+  "run_probes_before_training": false
+}

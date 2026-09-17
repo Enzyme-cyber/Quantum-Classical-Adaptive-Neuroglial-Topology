@@ -1,0 +1,53 @@
+Runner: V7.1-SAMPLE3-FACTOR-STRATEGY-3.0; core=V7.1; engine=V7.1-SPATIAL-EVOLVING-NG-1
+Base: 20 qubits, 2 layers
+Training trials: 95; holdouts=[4, 9, 25, 49, 420, 630, 945, 1024, 997]
+Direct N/log2(N)/hand-labelled complexity input: NONE
+Explicit experience replay: NONE
+Current meta signal: bounded actual flat-enumeration effort prefix only
+Pre-written recursive decomposition strategy: NONE
+Reference factorization used by controller/learning: NO; post-hoc scoring only
+Cost rule: divisor test=1, quotient gate=1, buffer transfer=1, re-entry=1 (configurable but equal by default)
+Exact candidate_edges supplied in JSON: 0 expected
+Auto-generated candidates: 16
+Diagnostic assemblies:
+{
+  "success_bridge": "AUTO_GG_G0_G1",
+  "quotient_gate": "AUTO_TRI_N2_G1_N7",
+  "reentry_edge": "AUTO_NN_G1_N7_N0",
+  "effort_meta_gate": "AUTO_TRI_N4_G2_N9"
+}
+  success_bridge: present=True  AUTO_GG_G0_G1
+  quotient_gate: present=True  AUTO_TRI_N2_G1_N7
+  reentry_edge: present=True  AUTO_NN_G1_N7_N0
+  effort_meta_gate: present=True  AUTO_TRI_N4_G2_N9
+candidate types: {'neuron_to_neuron': 6, 'glia_glia': 5, 'tripartite': 5}
+initial resources:
+{
+  "total_qubits": 20,
+  "neuronal_qubits": 10,
+  "glial_qubits": 10,
+  "layers": 2,
+  "input_events": 0,
+  "N_to_N_edges": 1,
+  "N_to_N_applications": 2,
+  "N_to_G_edges": 3,
+  "N_to_G_active_edge_layer_applications": 6,
+  "activity_gated_glial_microdomain_targets": [],
+  "G_to_G_edges": 0,
+  "G_to_G_XY_exchange_edges": 0,
+  "XY_exchange_time_scaled": false,
+  "XY_exchange_layer_divisor": 1,
+  "XY_exchange_activity_gated": false,
+  "XY_exchange_active_edge_layer_applications": 0,
+  "G_to_N_edges": 0,
+  "G_to_N_active_edge_layer_applications": 0,
+  "shared_glia_threshold_pairs": 0,
+  "shared_glia_threshold_activity_gated_targets": [],
+  "shared_glia_threshold_active_applications": 0,
+  "tripartite_synapse_edges": 0,
+  "tripartite_synapse_active_applications": 0,
+  "controlled_exchange_pairs": 0,
+  "kir_damping_pairs": 0,
+  "approx_primitive_gates": 84,
+  "approx_CNOT_count": 12
+}

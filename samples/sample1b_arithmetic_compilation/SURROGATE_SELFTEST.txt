@@ -1,0 +1,26 @@
+V7.1 Sample1B arithmetic-compilation surrogate self-test
+========================================================
+
+This is SOFTWARE-LOGIC validation only. It is not CPUQVM/QPU or biological evidence.
+
+PRIMARY profile, full agent:
+- initial ADD primitive: PASS (surrogate R2 = 1.0)
+- repeated-addition multiplication procedure: PASS (surrogate R2 = 1.0)
+- G0<->G1 formed: yes
+- N1+G1->N6 product route formed: yes, first active at training call 18
+- held-out direct product (operand value 4): PASS, R2 ~= 0.9998
+- raw interaction beta_xg ~= 1.0
+- mixed second difference: pre = 0; post > 0
+- targeted product-edge ablation: PASS
+- full learned-topology reset: PASS
+
+Surrogate causal suite:
+- full: ADD PASS; topology PASS; held-out direct product PASS
+- frozen_plasticity: ADD PASS; topology/product acquisition FAIL as expected
+- no_tripartite_growth: ADD PASS; topology/product acquisition FAIL as expected
+
+QPU-practical task profile also passes the surrogate program-logic test and produces a
+positive post-compilation mixed second difference.
+
+The build environment does not contain pyqpanda3, so CPUQVM and physical-QPU execution
+were NOT performed here. Run CPUQVM locally before interpreting physical-QPU results.

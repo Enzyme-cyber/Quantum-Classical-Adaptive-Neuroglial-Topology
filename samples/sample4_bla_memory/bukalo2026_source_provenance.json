@@ -1,0 +1,25 @@
+{
+  "citation": "Bukalo O et al. Astrocytes enable amygdala neural representations supporting memory. Nature 652, 434–? (2026). DOI:10.1038/s41586-025-10068-0",
+  "uploaded_source_data_workbook": "41586_2025_10068_MOESM6_ESM.xlsx",
+  "primary_protocol": {
+    "F-Con": "3 CS/US pairings in Context A",
+    "Ext1": "25 CS-alone in Context B",
+    "Ext2": "25 CS-alone in Context B",
+    "E-Ret": "5 CS in Context B",
+    "F-Ren": "5 CS in Context A"
+  },
+  "source_sheets": {
+    "Fig1d": "Fig.1d (EXT freezing)",
+    "Fig1f": "Fig.1f (AS-cyto_F-Con AUC)",
+    "Fig1h": "Fig.1h (AS-cyto_Ca2+ trans)",
+    "Fig2e": "Fig.2e (preExt Dq freezing)",
+    "Fig2k": "Fig.2k (pre-Ext Di freezing)",
+    "Fig3h": "Fig.3h (% neurons)",
+    "Fig4g": "Fig.4g (% tagged cells)"
+  },
+  "parameter_policy": {
+    "measured_data": "Experimental schedule, behavioral stage means, astrocyte transient means, and perturbation effect-size ratios come from the source-data workbook.",
+    "not_measured": "The paper does not report BLA-specific KCNJ10/KCNJ16/AQP4/SLC1A2/GJA1 values or quantum-gate angles. These V7.1 core inputs remain neutral/reference values and MUST NOT be described as Bukalo-measured parameters.",
+    "coarse_graining": "G0-G9 are functional coarse-grained astrocyte states/microdomains. They are not claimed to be experimentally identified cell types."
+  }
+}

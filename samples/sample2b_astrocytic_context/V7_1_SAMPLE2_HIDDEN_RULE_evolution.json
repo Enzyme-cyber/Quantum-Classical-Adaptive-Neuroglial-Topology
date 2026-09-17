@@ -1,0 +1,305 @@
+{
+  "name": "V7.1 Sample 2 symmetric spatial-competitive hidden-rule evolution",
+  "description": "No exact future edge is listed. The four reward-association glia encode only sensory-action histories. G0-G3 are mutually eligible with modest non-rule-specific spatial heterogeneity; each association glia is equally eligible to both LEFT and RIGHT decision targets. Rewarded sensory-action replay, not a hidden context bit, supplies the action-specific plasticity eligibility trace.",
+  "trace": {
+    "neuron_decay": 0.78,
+    "neuron_gain": 0.28,
+    "glia_decay": 0.9,
+    "glia_gain": 0.32,
+    "trace_max": 1.0
+  },
+  "shots_override": 2500,
+  "qpu_repeats_override": 1,
+  "competition": {
+    "enabled": true,
+    "default_winners_per_group": 1,
+    "winners_by_prefix": {
+      "GG": 1,
+      "TRI_T": 1,
+      "TRI_G": 1,
+      "NN_IN": 1,
+      "NN_OUT": 1
+    },
+    "loser_decay_multiplier": 1.9
+  },
+  "spatial_growth": {
+    "enabled": true,
+    "minimum_affinity": 0.18,
+    "generate_edge_types": [
+      "glia_glia",
+      "tripartite",
+      "neuron_to_neuron"
+    ],
+    "local_domains": [
+      {
+        "glia": 0,
+        "nearby_glia": [
+          {
+            "glia": 1,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 2,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 3,
+            "affinity": 0.89,
+            "gg_affinity": 0.89
+          },
+          {
+            "glia": 4,
+            "affinity": 0.95,
+            "gg_affinity": 0.95
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 0.94,
+            "tripartite_sensory_affinity": 0.94,
+            "tripartite_target_affinity": 0.2,
+            "nn_affinity": 0.94
+          },
+          {
+            "neuron": 8,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          },
+          {
+            "neuron": 9,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          }
+        ]
+      },
+      {
+        "glia": 1,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 2,
+            "affinity": 0.91,
+            "gg_affinity": 0.91
+          },
+          {
+            "glia": 3,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 5,
+            "affinity": 0.95,
+            "gg_affinity": 0.95
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 0,
+            "affinity": 0.94,
+            "tripartite_sensory_affinity": 0.94,
+            "tripartite_target_affinity": 0.2,
+            "nn_affinity": 0.94
+          },
+          {
+            "neuron": 8,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          },
+          {
+            "neuron": 9,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          }
+        ]
+      },
+      {
+        "glia": 2,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 1,
+            "affinity": 0.91,
+            "gg_affinity": 0.91
+          },
+          {
+            "glia": 3,
+            "affinity": 0.89,
+            "gg_affinity": 0.89
+          },
+          {
+            "glia": 4,
+            "affinity": 0.94,
+            "gg_affinity": 0.94
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 1,
+            "affinity": 0.94,
+            "tripartite_sensory_affinity": 0.94,
+            "tripartite_target_affinity": 0.2,
+            "nn_affinity": 0.94
+          },
+          {
+            "neuron": 8,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          },
+          {
+            "neuron": 9,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          }
+        ]
+      },
+      {
+        "glia": 3,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 0.89,
+            "gg_affinity": 0.89
+          },
+          {
+            "glia": 1,
+            "affinity": 0.9,
+            "gg_affinity": 0.9
+          },
+          {
+            "glia": 2,
+            "affinity": 0.89,
+            "gg_affinity": 0.89
+          },
+          {
+            "glia": 5,
+            "affinity": 0.94,
+            "gg_affinity": 0.94
+          }
+        ],
+        "nearby_neurons": [
+          {
+            "neuron": 1,
+            "affinity": 0.94,
+            "tripartite_sensory_affinity": 0.94,
+            "tripartite_target_affinity": 0.2,
+            "nn_affinity": 0.94
+          },
+          {
+            "neuron": 8,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          },
+          {
+            "neuron": 9,
+            "affinity": 0.9,
+            "tripartite_sensory_affinity": 0.2,
+            "tripartite_target_affinity": 0.9,
+            "nn_affinity": 0.9
+          }
+        ]
+      },
+      {
+        "glia": 4,
+        "nearby_glia": [
+          {
+            "glia": 0,
+            "affinity": 0.95,
+            "gg_affinity": 0.95
+          },
+          {
+            "glia": 2,
+            "affinity": 0.94,
+            "gg_affinity": 0.94
+          }
+        ],
+        "nearby_neurons": []
+      },
+      {
+        "glia": 5,
+        "nearby_glia": [
+          {
+            "glia": 1,
+            "affinity": 0.95,
+            "gg_affinity": 0.95
+          },
+          {
+            "glia": 3,
+            "affinity": 0.94,
+            "gg_affinity": 0.94
+          }
+        ],
+        "nearby_neurons": []
+      }
+    ],
+    "edge_templates": {
+      "glia_glia": {
+        "growth_threshold": 0.18,
+        "learning_rate": 0.3,
+        "structural_decay": 0.03,
+        "on_threshold": 0.36,
+        "off_threshold": 0.18,
+        "max_weight": 0.8,
+        "max_exchange_weight": 1.1,
+        "driver_mode": "min"
+      },
+      "tripartite": {
+        "growth_threshold": 0.15,
+        "learning_rate": 0.3,
+        "structural_decay": 0.03,
+        "on_threshold": 0.36,
+        "off_threshold": 0.17,
+        "max_weight": 1.35,
+        "driver_mode": "min",
+        "requires_glial_network": true,
+        "require_phasic_sensory": true,
+        "sensory_pool": [
+          0,
+          1
+        ],
+        "target_pool": [
+          8,
+          9
+        ]
+      },
+      "neuron_to_neuron": {
+        "growth_threshold": 0.22,
+        "learning_rate": 0.18,
+        "structural_decay": 0.03,
+        "on_threshold": 0.46,
+        "off_threshold": 0.22,
+        "max_weight": 1.6,
+        "driver_mode": "min",
+        "requires_glial_network": true
+      }
+    }
+  },
+  "candidate_edges": [],
+  "training_phases": [],
+  "probes": [],
+  "run_probes_before_training": false
+}

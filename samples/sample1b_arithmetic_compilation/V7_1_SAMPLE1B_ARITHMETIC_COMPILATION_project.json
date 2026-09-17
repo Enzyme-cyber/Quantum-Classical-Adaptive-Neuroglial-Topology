@@ -1,0 +1,74 @@
+{
+  "version": "V7.1",
+  "name": "Sample1B arithmetic compilation: recurrent addition to emergent multiplicative shortcut",
+  "biological_input": {
+    "proteins": {
+      "KCNJ10": 1.0,
+      "KCNJ16": 0.325,
+      "ATP1A2": 1.0,
+      "AQP4": 1.0,
+      "SLC1A2": 1.0,
+      "SLC1A3": 1.0,
+      "GJA1": 1.0,
+      "GJB6": 1.0,
+      "ITPR2": 1.0
+    },
+    "pH": 7.4,
+    "K_out_mM": 3.5,
+    "Vm_mV": -80.0,
+    "neuronal_drive": 1.0,
+    "hardware_gain": 1.0,
+    "scale_mode": "relative_linear",
+    "v3_summary": "",
+    "kir_assembly_eta": 0.75
+  },
+  "network": {
+    "total_qubits": 14,
+    "layers": 1,
+    "layer_dt_ms": 10.0,
+    "neural_inputs": [],
+    "neuron_to_neuron": [
+      {"source": 0, "target": 2, "weight": 3.0},
+      {"source": 1, "target": 3, "weight": 3.0}
+    ],
+    "neuron_to_glia": [
+      {"source": 2, "target": 0, "weight": 4.0},
+      {"source": 3, "target": 0, "weight": 4.0},
+      {"source": 4, "target": 1, "weight": 4.0}
+    ],
+    "glia_glia": [],
+    "glia_to_neuron": [],
+    "tripartite_synapses": [],
+    "enable_shared_glia_threshold": false,
+    "max_threshold_pairs_per_glia": 0,
+    "activity_gate_shared_glia_threshold_targets": [],
+    "activity_gate_glia_microdomain_targets": [],
+    "enable_tripartite_synapses": true,
+    "enable_controlled_exchange": false,
+    "exchange_activation_threshold": 0.75,
+    "enable_glia_exchange": true,
+    "scale_glia_exchange_by_layers": false,
+    "activity_gate_glia_exchange": false,
+    "enable_kir_damping": false,
+    "initialize_neural_h": false,
+    "initialize_glial_baseline": false,
+    "neural_readout_mode": "population"
+  },
+  "hardware": {
+    "backend": "auto",
+    "shots": 3000,
+    "repeats": 1,
+    "batch_size": 1,
+    "parallel_jobs": 1,
+    "mapping": true,
+    "optimization": true,
+    "amend": true,
+    "use_specified_blocks": false,
+    "prefer_disjoint_blocks": false,
+    "scheduler_retries": 3,
+    "scheduler_retry_wait_s": 30,
+    "force_parallel_large_qpu": false,
+    "local_safe_qubits": 20
+  },
+  "local_shots": 8000
+}

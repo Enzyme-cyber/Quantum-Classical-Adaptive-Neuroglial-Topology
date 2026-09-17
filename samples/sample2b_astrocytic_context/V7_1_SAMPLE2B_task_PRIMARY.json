@@ -1,0 +1,33 @@
+{
+  "name": "Sample 2B paired-history astrocytic context necessity test",
+  "history_trials": 120,
+  "stimulus_probability": 0.96,
+  "reward_replay_probability": 0.98,
+  "baseline_exploration": 0.06,
+  "error_exploration": 0.36,
+  "choice_gain": 14.0,
+  "reward_correct": 0.9,
+  "reward_incorrect": 0.1,
+  "reward_suite": "deterministic",
+  "seed": 20260913,
+  "probe_repeats": 8,
+  "glial_trace_probability_gain": 0.95,
+  "glial_probability_cap": 0.95,
+  "probe_conditions": [
+    "intact_glia",
+    "activity_equalized",
+    "topology_equalized_union",
+    "glia_equalized",
+    "glia_ablated"
+  ],
+  "node_map": {
+    "sensory": {"0": 0, "1": 1},
+    "association_replay": {
+      "0,0": 2,
+      "0,1": 3,
+      "1,1": 4,
+      "1,0": 5
+    },
+    "decision": {"0": 8, "1": 9}
+  }
+}

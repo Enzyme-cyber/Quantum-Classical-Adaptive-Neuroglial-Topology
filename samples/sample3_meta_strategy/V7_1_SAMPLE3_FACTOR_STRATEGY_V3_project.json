@@ -1,0 +1,115 @@
+{
+  "version": "V7.1",
+  "name": "V7.1 Sample 3 V3 \u2014 effort-driven meta-selection of emergent quotient re-entry",
+  "biological_input": {
+    "proteins": {
+      "KCNJ10": 1.0,
+      "KCNJ16": 0.325,
+      "ATP1A2": 1.0,
+      "AQP4": 1.0,
+      "SLC1A2": 1.0,
+      "SLC1A3": 1.0,
+      "GJA1": 1.0,
+      "GJB6": 1.0,
+      "ITPR2": 1.0
+    },
+    "pH": 7.4,
+    "K_out_mM": 3.5,
+    "Vm_mV": -80.0,
+    "neuronal_drive": 1.0,
+    "hardware_gain": 1.0,
+    "scale_mode": "relative_linear",
+    "v3_summary": "",
+    "kir_assembly_eta": 0.75
+  },
+  "network": {
+    "total_qubits": 20,
+    "layers": 2,
+    "layer_dt_ms": 10.0,
+    "neural_inputs": [],
+    "neuron_to_neuron": [
+      {
+        "source": 6,
+        "target": 8,
+        "weight": 2.5
+      }
+    ],
+    "neuron_to_glia": [
+      {
+        "source": 1,
+        "target": 0,
+        "weight": 4.0
+      },
+      {
+        "source": 2,
+        "target": 1,
+        "weight": 4.0
+      },
+      {
+        "source": 4,
+        "target": 2,
+        "weight": 3.6
+      }
+    ],
+    "glia_glia": [],
+    "glia_to_neuron": [],
+    "tripartite_synapses": [],
+    "enable_shared_glia_threshold": false,
+    "max_threshold_pairs_per_glia": 0,
+    "activity_gate_shared_glia_threshold_targets": [],
+    "activity_gate_glia_microdomain_targets": [],
+    "enable_tripartite_synapses": true,
+    "enable_controlled_exchange": false,
+    "exchange_activation_threshold": 0.75,
+    "enable_glia_exchange": true,
+    "scale_glia_exchange_by_layers": false,
+    "activity_gate_glia_exchange": false,
+    "enable_kir_damping": false,
+    "initialize_neural_h": false,
+    "initialize_glial_baseline": false,
+    "neural_readout_mode": "population"
+  },
+  "hardware": {
+    "backend": "auto",
+    "shots": 2500,
+    "repeats": 1,
+    "batch_size": 1,
+    "parallel_jobs": 1,
+    "mapping": true,
+    "optimization": true,
+    "amend": true,
+    "use_specified_blocks": false,
+    "prefer_disjoint_blocks": false,
+    "scheduler_retries": 3,
+    "scheduler_retry_wait_s": 30,
+    "force_parallel_large_qpu": false,
+    "local_safe_qubits": 20
+  },
+  "local_shots": 2500,
+  "node_roles": {
+    "neurons": {
+      "N0": "FACTOR_TEST_OPERATOR",
+      "N1": "SUCCESSFUL_DIVISION_EVENT",
+      "N2": "NONTERMINAL_QUOTIENT_EVENT",
+      "N3": "TERMINAL_QUOTIENT_EVENT",
+      "N4": "CURRENT_ENUMERATION_EFFORT",
+      "N5": "META_DISTRACTOR_ROUTE",
+      "N6": "ENUMERATION_PRIOR",
+      "N7": "QUOTIENT_BUFFER",
+      "N8": "ENUMERATION_STRATEGY_ROUTE",
+      "N9": "FEEDBACK_STRATEGY_ROUTE"
+    },
+    "glia": {
+      "G0": "DIVISION_SUCCESS_TRACE",
+      "G1": "QUOTIENT_CONTINUATION_TRACE",
+      "G2": "EFFORT_HISTORY_TRACE",
+      "G3": "RESERVED",
+      "G4": "SUCCESS_DISTRACTOR",
+      "G5": "QUOTIENT_DISTRACTOR",
+      "G6": "EFFORT_DISTRACTOR",
+      "G7": "RESERVED",
+      "G8": "RESERVED",
+      "G9": "RESERVED"
+    }
+  }
+}

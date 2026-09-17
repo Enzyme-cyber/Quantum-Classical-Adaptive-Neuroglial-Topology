@@ -1,0 +1,130 @@
+{
+  "version": "V7.1-SAMPLE4-BLA-1.3",
+  "name": "Bukalo2026 biologically constrained reduced BLA neuroglial circuit \u2014 competing-memory version",
+  "biological_input": {
+    "proteins": {
+      "KCNJ10": 1.0,
+      "KCNJ16": 0.325,
+      "ATP1A2": 1.0,
+      "AQP4": 1.0,
+      "SLC1A2": 1.0,
+      "SLC1A3": 1.0,
+      "GJA1": 1.0,
+      "GJB6": 1.0,
+      "ITPR2": 1.0
+    },
+    "pH": 7.4,
+    "K_out_mM": 3.5,
+    "Vm_mV": -80.0,
+    "neuronal_drive": 1.0,
+    "hardware_gain": 1.0,
+    "scale_mode": "relative_linear",
+    "v3_summary": "",
+    "kir_assembly_eta": 0.75
+  },
+  "network": {
+    "total_qubits": 20,
+    "layers": 4,
+    "layer_dt_ms": 10.0,
+    "neural_inputs": [],
+    "neuron_to_neuron": [
+      {
+        "source": 1,
+        "target": 4,
+        "weight": 3.2
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "weight": 0.55
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "weight": 2.8
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "weight": 2.4
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "weight": 2.8
+      }
+    ],
+    "neuron_to_glia": [
+      {
+        "source": 1,
+        "target": 0,
+        "weight": 3.8
+      },
+      {
+        "source": 0,
+        "target": 1,
+        "weight": 0.28
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "weight": 0.22
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "weight": 2.4
+      },
+      {
+        "source": 4,
+        "target": 4,
+        "weight": 3.2
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "weight": 2.8
+      }
+    ],
+    "glia_glia": [],
+    "glia_to_neuron": [
+      {
+        "source": 4,
+        "target": 6,
+        "weight": 3.0
+      }
+    ],
+    "tripartite_synapses": [],
+    "enable_shared_glia_threshold": false,
+    "max_threshold_pairs_per_glia": 0,
+    "activity_gate_shared_glia_threshold_targets": [],
+    "activity_gate_glia_microdomain_targets": [],
+    "enable_tripartite_synapses": true,
+    "enable_controlled_exchange": false,
+    "exchange_activation_threshold": 0.75,
+    "enable_glia_exchange": true,
+    "scale_glia_exchange_by_layers": false,
+    "activity_gate_glia_exchange": false,
+    "enable_kir_damping": false,
+    "initialize_neural_h": false,
+    "initialize_glial_baseline": false,
+    "neural_readout_mode": "population"
+  },
+  "hardware": {
+    "backend": "auto",
+    "shots": 3000,
+    "repeats": 1,
+    "batch_size": 1,
+    "parallel_jobs": 1,
+    "mapping": true,
+    "optimization": true,
+    "amend": true,
+    "use_specified_blocks": false,
+    "prefer_disjoint_blocks": false,
+    "scheduler_retries": 3,
+    "scheduler_retry_wait_s": 30,
+    "force_parallel_large_qpu": false,
+    "local_safe_qubits": 20
+  },
+  "local_shots": 10000
+}

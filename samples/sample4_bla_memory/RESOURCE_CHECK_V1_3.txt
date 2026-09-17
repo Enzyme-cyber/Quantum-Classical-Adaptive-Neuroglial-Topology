@@ -1,0 +1,12 @@
+Sample4 resource check: total_qubits=20, neurons=10, glia=10
+Exact candidate_edges supplied in JSON: 0; auto-generated candidates=21
+  fear_gg          AUTO_GG_G0_G1              present=True
+  fear_context_gg  AUTO_GG_G1_G3              present=True
+  fear_operator    AUTO_TRI_N0_G1_N4          present=True
+  ext_gg           AUTO_GG_G2_G5              present=True
+  ext_operator     AUTO_TRI_N3_G2_N5          present=True
+  ext_context      AUTO_TRI_N3_G2_N9          present=True
+  context_bypass    AUTO_TRI_N0_G2_N5          present=False (must be False in V1.3)
+  context_bypass    AUTO_TRI_N0_G2_N9          present=False (must be False in V1.3)
+Biological schedule: 3 CS/US + 25+25 CS-alone + 5 E-Ret + 5 F-Ren
+IMPORTANT: schedule/effect-size targets are empirical. Retained-memory expression and G1<->G3 reinstatement are explicit model hypotheses; Context-B gating is a reduced causal representation of context-dependent extinction, not a measured single synapse.

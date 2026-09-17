@@ -1,0 +1,4 @@
+transition,stage_a,stage_b,model_delta_percentage_points,empirical_delta_percentage_points,absolute_error_pp
+extinction_drop,E-Ext,L-Ext,51.52788594779494,42.15686274509804,9.371023202696904
+retrieval_drop,E-Ext,E-Ret,51.90832899657257,36.07843137254902,15.829897624023552
+renewal_return,F-Ren,E-Ret,64.82144874596507,48.82352941176471,15.997919334200361

@@ -1,0 +1,48 @@
+parameter,value,status,source_or_rationale,claim_allowed
+F-Con pairings,3,EMPIRICAL,Bukalo2026 Methods,Exact experimental schedule
+CS duration,30 s,EMPIRICAL,Bukalo2026 Methods,Exact experimental parameter
+CS intensity,75 dB white noise,EMPIRICAL,Bukalo2026 Methods,Exact experimental parameter
+US duration,2 s,EMPIRICAL,Bukalo2026 Methods,Exact experimental parameter
+US intensity main,0.6 mA,EMPIRICAL,Bukalo2026 Methods,Exact main-experiment parameter
+US intensity chemogenetic,0.4 mA,EMPIRICAL,Bukalo2026 Methods,Exact chemogenetic-experiment parameter
+F-Con inter-CS interval,60-90 s variable,EMPIRICAL,Bukalo2026 Methods,Exact experimental parameter
+Extinction schedule,25 CS/day x 2 days,EMPIRICAL,Bukalo2026 Fig1/Methods,Exact fibre-photometry schedule
+Extinction inter-CS interval,60 s,EMPIRICAL,Bukalo2026 Methods,Exact fibre-photometry parameter
+E-Ret,5 CS Context B,EMPIRICAL,Bukalo2026 Methods,Exact experimental schedule
+F-Ren,5 CS Context A,EMPIRICAL,Bukalo2026 Methods,Exact experimental schedule
+E-Ext freezing,70.784%,EMPIRICAL,MOESM6 Fig1d source data,External validation target
+L-Ext freezing,28.627%,EMPIRICAL,MOESM6 Fig1d source data,External validation target
+E-Ret freezing,34.706%,EMPIRICAL,MOESM6 Fig1d source data,External validation target
+F-Ren freezing,83.529%,EMPIRICAL,MOESM6 Fig1d source data,External validation target
+E-Ext astrocyte transients,7.353,EMPIRICAL,MOESM6 Fig1h source data,External validation target
+L-Ext astrocyte transients,4.882,EMPIRICAL,MOESM6 Fig1h source data,External validation target
+E-Ret astrocyte transients,4.824,EMPIRICAL,MOESM6 Fig1h source data,External validation target
+F-Ren astrocyte transients,9.786,EMPIRICAL,MOESM6 Fig1h source data,External validation target
+hM3Dq early retrieval scalar,0.5239,DERIVED_EMPIRICAL,Fig2e hM3Dq/control E-Ext freezing ratio,Phenomenological perturbation scalar only
+hM3Dq extinction plasticity scalar,0.45,DERIVED_EMPIRICAL,Fig3h positive CS-modulated fraction ratio,Phenomenological perturbation scalar only
+hM4Di early retrieval scalar,1.4013,DERIVED_EMPIRICAL,Fig2k hM4Di/control E-Ext freezing ratio,Phenomenological perturbation scalar only
+hM4Di extinction plasticity scalar,0.5350,DERIVED_EMPIRICAL,Inverse Fig2k E-Ret impairment ratio,Phenomenological perturbation scalar only
+CalEx BLA-PL scalar,0.3735,DERIVED_EMPIRICAL,Fig4g 31%/83% phototagged CS-responsive ratio,Pathway-specific perturbation scalar only
+CS circuit encoding probability,0.96,MODEL_ENCODING,Chosen bounded event-presence encoding,Do not call biological probability
+US circuit encoding probability,0.96,MODEL_ENCODING,Chosen bounded event-presence encoding,Do not call biological probability
+Context circuit encoding probability,0.92,MODEL_ENCODING,Chosen bounded event-presence encoding,Do not call biological probability
+V7 protein vector,neutral/reference,MODEL_REFERENCE,Bukalo2026 does not quantify these BLA proteins,Do not call Bukalo-measured parameters
+G0-G9 labels,functional coarse graining,MODEL_HYPOTHESIS,Paper supports heterogeneous astrocyte events but not these exact cell types,Do not call experimentally identified astrocyte types
+candidate_edges,empty,STRUCTURAL_SAFEGUARD,Spatial possibility graph generates candidates,Supports no explicit future-edge claim
+QPU dormant-edge pruning,enabled only in QPU mode,IDEAL_EQUIVALENT_COMPILATION,Identity-equivalent removal of provably unreachable controls,Avoids hardware contamination without changing ideal model
+Naive CS->G1 base weight,0.28,MODEL_HYPOTHESIS,"Weak pre-learning CS responsiveness; Bukalo shows robust US but not CS astrocyte response during conditioning, then learned CS response during E-Ext",Model encoding only; not measured synaptic/astrocytic weight
+Naive CS->G2 base weight,0.22,MODEL_HYPOTHESIS,Extinction-adapting state should not be strongly CS-responsive before extinction learning,Model encoding only
+Fear memory responsiveness capacity,3.0,MODEL_HYPOTHESIS,Slow history changes future CS responsiveness rather than tonic Ca2+; evaluated against held-out stage trajectory,"Mechanistic hypothesis, not Bukalo-measured constant"
+Extinction memory responsiveness capacity,2.6,MODEL_HYPOTHESIS,Repeated Context-B CS experience recruits future extinction-state responsiveness,"Mechanistic hypothesis, not Bukalo-measured constant"
+Cross-state suppression gain,0.75,MODEL_HYPOTHESIS,V1.3: extinction modulates expression of retained fear memory only in Context B; lower than V1.2 to avoid treating extinction as memory erasure,Mechanistic expression parameter; not a measured inhibitory coefficient
+Context-A reinstatement edge,G1<->G3; max exchange 0.35,MODEL_PREDICTION,"Renewal occurs after return to conditioning Context A, but the paper does not measure this specific astrocyte edge; V1.3 makes reinstatement modest",Testable model prediction only
+Extinction output gate,Context-B (N3)+G2 -> N5/N9,MODEL_HYPOTHESIS,Extinction/retrieval occur in Context B and fear renewal is tested after return to Context A; V1.3 requires context coincidence for downstream safety expression,Population-level causal coarse graining; not a measured single synapse
+DREADD extinction plasticity eligibility,0.45 hM3Dq; 0.535 hM4Di,DERIVED_EMPIRICAL_ENCODING,Source-data effect sizes already listed; now applied to G2-G5 and extinction tripartite learning as well as output capacity,"Phenomenological eligibility scalar, not molecular kinetics"
+CalEx circuit amplitude gain,sqrt(31/83)=0.6111,DERIVED_MODEL_ENCODING,Fig4g gives response-fraction ratio 31/83; small-angle probability-to-amplitude mapping uses sqrt(r),Circuit encoding; empirical target remains 31/83
+Fear-memory storage proxy,min strength of learned fear G-G and tripartite assembly,MODEL_HYPOTHESIS,V1.2 local results retained the structural fear assembly even when online G1 expression collapsed; V1.3 explicitly treats the persistent assembly as storage,Model storage proxy; not a measured molecular engram variable
+Extinction-memory storage proxy,min strength of learned extinction G-G and tripartite assembly,MODEL_HYPOTHESIS,Extinction is represented as a second learned assembly that can coexist with the fear assembly,Model storage proxy; not a measured molecular engram variable
+Fear memory expression floor,0.55,MODEL_HYPOTHESIS,Retained structural memory should preserve partial future responsiveness even when the current G1 trace is low; avoids equating low current Ca2+ with memory loss,Expression-law parameter; not fitted stage output
+Extinction memory expression floor,0.30,MODEL_HYPOTHESIS,Extinction assembly retains some cue-reactivatable responsiveness while remaining context gated downstream,Expression-law parameter; not fitted stage output
+Context-A reinstatement gain,0.35,MODEL_HYPOTHESIS,Context A provides a modest bias to re-expression of stored fear memory during renewal rather than directly forcing fear output,Model modulation parameter; not a measured gain
+CS-only extinction-output bypass,AUTO_TRI_N0_G2_N5 and AUTO_TRI_N0_G2_N9 excluded,STRUCTURAL_SAFEGUARD,V1.2 auto-generated CS-only G2 tripartite routes that bypassed Context B and suppressed renewal; V1.3 spatial eligibility keeps N0->G2 fixed input but requires N3 for downstream extinction output,Causal-model restriction motivated by context-dependent extinction/renewal; not a microscopic anatomy claim
+no_retained_fear_memory control,current G1 trace only; no independent structural-memory expression floor,FALSIFICATION_CONTROL,Tests whether the persistent fear assembly must contribute to future expression beyond the current G1 trace alone,Matched model ablation

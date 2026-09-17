@@ -1,0 +1,36 @@
+{
+  "name": "Sample 2 QPU minimal mechanism validation",
+  "trials": 110,
+  "reversal_trial": 44,
+  "stimulus_probability": 0.96,
+  "reward_replay_probability": 0.98,
+  "baseline_exploration": 0.06,
+  "error_exploration": 0.36,
+  "choice_gain": 14.0,
+  "reward_correct": 0.9,
+  "reward_incorrect": 0.1,
+  "seed": 20260814,
+  "rolling_window": 10,
+  "evaluation_window": 18,
+  "recovery_accuracy": 0.68,
+  "recovery_consecutive_windows": 8,
+  "agents": [
+    "full_spatial_competition"
+  ],
+  "node_map": {
+    "sensory": {
+      "0": 0,
+      "1": 1
+    },
+    "association_replay": {
+      "0,0": 2,
+      "0,1": 3,
+      "1,1": 4,
+      "1,0": 5
+    },
+    "decision": {
+      "0": 8,
+      "1": 9
+    }
+  }
+}

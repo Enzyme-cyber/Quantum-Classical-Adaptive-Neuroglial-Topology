@@ -1,0 +1,3 @@
+@echo off
+python V7_1_SAMPLE3_FACTOR_STRATEGY_V3.py --mode local --task-config V7_1_SAMPLE3_FACTOR_STRATEGY_V3_task_PRIMARY.json --agents full_competition,no_strategy_competition,frozen_spatial,no_slow_memory,no_effort_signal,no_meta_gate,constant_effort_signal,equal_affinity,shuffled_affinity
+pause

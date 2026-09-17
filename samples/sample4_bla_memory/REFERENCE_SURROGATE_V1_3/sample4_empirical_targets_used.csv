@@ -1,0 +1,45 @@
+category,metric,stage,value,n,sem,source_figure,source_sheet,notes
+primary_stage,freezing_percent,PreCon_baseline,8.235294117647058,17.0,4.609,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,FCon_CS1,34.31372549019608,17.0,6.466,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,FCon_CS3,77.45098039215686,17.0,4.727,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,E-Ext,70.7843137254902,17.0,3.883,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,L-Ext,28.627450980392155,17.0,6.003,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,E-Ret,34.705882352941174,17.0,4.723,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,freezing_percent,F-Ren,83.52941176470588,17.0,2.564,Fig.1d,Fig.1d (EXT freezing),Direct group means from MOESM6 source data; SEM rounded from extracted source values.
+primary_stage,cs_related_astrocyte_ca_transients,E-Ext,7.352941176470588,17.0,0.8826,Fig.1h,Fig.1h (AS-cyto_Ca2+ trans),Mean CS-related astrocyte Ca2+ transient count.
+primary_stage,cs_related_astrocyte_ca_transients,L-Ext,4.882352941176471,17.0,0.54153,Fig.1h,Fig.1h (AS-cyto_Ca2+ trans),Mean CS-related astrocyte Ca2+ transient count.
+primary_stage,cs_related_astrocyte_ca_transients,E-Ret,4.823529411764706,17.0,0.6315,Fig.1h,Fig.1h (AS-cyto_Ca2+ trans),Mean CS-related astrocyte Ca2+ transient count.
+primary_stage,cs_related_astrocyte_ca_transients,F-Ren,9.785714285714286,14.0,1.00098,Fig.1h,Fig.1h (AS-cyto_Ca2+ trans),Mean CS-related astrocyte Ca2+ transient count.
+conditioning,astrocyte_auc,FCon_CS,0.5581,17.0,0.3029,Fig.1f,Fig.1f (AS-cyto_F-Con AUC),Approximate group mean from source data extraction.
+conditioning,astrocyte_auc,FCon_US,15.1451,17.0,4.901,Fig.1f,Fig.1f (AS-cyto_F-Con AUC),"Approximate group mean from source data extraction; used as relative biological constraint, not as a gate angle."
+hM3Dq_preExt,freezing_percent_control,E-Ext,42.2222222222,9.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_control,Ext_block2,24.8148148148,9.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_control,Ext_block10,5.1851851852,9.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_control,E-Ret,17.037037037,9.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_control,F-Ren,74.6913580247,9.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_hM3Dq,E-Ext,22.1212121212,11.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_hM3Dq,Ext_block2,14.5454545455,11.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_hM3Dq,Ext_block10,6.3636363636,11.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_hM3Dq,E-Ret,41.5151515152,11.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM3Dq_preExt,freezing_percent_hM3Dq,F-Ren,77.7777777778,11.0,,Fig.2e,Fig.2e (preExt Dq freezing),
+hM4Di_preExt,freezing_percent_control,E-Ext,42.2222222222,9.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_control,Ext_block2,24.0740740741,9.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_control,Ext_block10,6.2962962963,9.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_control,E-Ret,24.0740740741,9.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_control,F-Ren,62.5925925926,9.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_hM4Di,E-Ext,59.1666666667,12.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_hM4Di,Ext_block2,37.5,12.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_hM4Di,Ext_block10,16.3888888889,12.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_hM4Di,E-Ret,45.0,12.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+hM4Di_preExt,freezing_percent_hM4Di,F-Ren,67.2222222222,12.0,,Fig.2k,Fig.2k (pre-Ext Di freezing),
+neuronal_representation,positive_cs_modulated_fraction,Veh,0.13,,,Fig.3h,Fig.3h (% neurons),
+neuronal_representation,positive_cs_modulated_fraction,CNO_hM3Dq,0.0585,,,Fig.3h,Fig.3h (% neurons),
+BLA_to_PL,phototagged_cs_responsive_fraction,Control,0.83,,,Fig.4g,Fig.4g (% tagged cells),
+BLA_to_PL,phototagged_cs_responsive_fraction,CalEx,0.31,,,Fig.4g,Fig.4g (% tagged cells),
+BLA_to_PL,nontagged_cs_responsive_fraction,Control,0.5,,,Fig.4g,Fig.4g (% tagged cells),
+BLA_to_PL,nontagged_cs_responsive_fraction,CalEx,0.51,,,Fig.4g,Fig.4g (% tagged cells),
+derived_scalar,hM3Dq_early_retrieval_fast_gain,ratio,0.5239234449760651,,,derived,derived from Fig.2e,22.1212/42.2222; applied only as a phenomenological fast astrocyte-signalling perturbation during extinction.
+derived_scalar,hM3Dq_extinction_plasticity_gain,ratio,0.45,,,derived,derived from Fig.3h,"5.85%/13%; used as extinction-plasticity reduction scalar, not a molecular kinetic constant."
+derived_scalar,hM4Di_early_retrieval_fast_gain,ratio,1.4013157894752113,,,derived,derived from Fig.2k,59.1667/42.2222; capped by circuit amplitude/weight constraints.
+derived_scalar,hM4Di_extinction_plasticity_gain,ratio,0.5349794238688889,,,derived,derived from Fig.2k,24.0741/45.0; phenomenological inverse impairment scalar.
+derived_scalar,CalEx_BLA_PL_gain,ratio,0.3734939759036145,,,derived,derived from Fig.4g,31%/83%; applied specifically to astrocyte-supported BLA->PL readout.

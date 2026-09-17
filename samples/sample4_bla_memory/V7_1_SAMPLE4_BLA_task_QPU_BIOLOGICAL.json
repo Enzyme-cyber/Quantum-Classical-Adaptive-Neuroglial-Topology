@@ -1,0 +1,26 @@
+{
+  "name": "Sample4 V1.3 Bukalo2026 BLA competing-memory fear-extinction-renewal",
+  "seed": 20260817,
+  "conditioning_pairings": 3,
+  "ext_day1_trials": 25,
+  "ext_day2_trials": 25,
+  "retrieval_trials": 5,
+  "renewal_trials": 5,
+  "early_extinction_block": 5,
+  "late_extinction_block": 5,
+  "cs_probability": 0.96,
+  "us_probability": 0.96,
+  "context_probability": 0.92,
+  "behavior_floor": 0.04,
+  "agents": [
+    "full_biological"
+  ],
+  "empirical_constraints": "bukalo2026_empirical_constraints.csv",
+  "fear_memory_capacity": 3.0,
+  "extinction_memory_capacity": 2.6,
+  "cross_state_suppression_gain": 0.75,
+  "reactivation_weight_cap": 3.4,
+  "fear_memory_expression_floor": 0.55,
+  "extinction_memory_expression_floor": 0.3,
+  "context_a_reinstatement_gain": 0.35
+}
